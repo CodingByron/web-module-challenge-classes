@@ -175,16 +175,16 @@ class Student extends Lambdasian {
     super({name, age, location, previousBackground, className, favSubjects});
     this.previousBackground = previousBackground;
     this.className = className;
-    this.favSubjects = [favSubjects];
+    this.favSubjects = favSubjects;
    }
    listSubjects() {
     return `Loving ${this.favSubjects}!`
    }
    PRAssignment(subject) {
-    return `${student.name} has submitted a PR for ${subject}`
+    return `${this.name} has submitted a PR for ${subject}`
    }
-   sprintChallenge() {
-    return `${student.name} has begun sprint challenge on ${subject}`
+   sprintChallenge(subject) {
+    return `${this.name} has begun sprint challenge on ${subject}`
    }
 }
 
@@ -202,8 +202,12 @@ class Student extends Lambdasian {
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager {
-   
+class ProjectManager extends Instructor {
+   constructor({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor}) {
+    super({name, age, location, specialty, favLanguage, catchPhrase, gradClassName, favInstructor});
+    this.gradClassName = gradClassName;
+    this.favInstructor = favInstructor;
+   }
 }
 
 /*
